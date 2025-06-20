@@ -73,10 +73,15 @@ Project Structure ->
 RoadEye/
 
 ├── vehicle.py         # Main script for vehicle detection and counting
+
 ├── best.pt            # Pre-trained YOLO model file (user-provided)
+
 ├── t1.mp4             # Input video file (user-provided)
+
 ├── output_video.mp4   # Output video with annotations (generated)
+
 ├── README.md          # Project documentation
+
 └── DESCRIPTION.md     # Brief project description
 
 
