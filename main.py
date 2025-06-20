@@ -6,7 +6,7 @@ from screeninfo import get_monitors
 model = YOLO('best.pt')
 
 # Input Video
-cap = cv2.VideoCapture('t2.mp4')
+cap = cv2.VideoCapture('input_video.mp4')
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = cap.get(cv2.CAP_PROP_FPS)
