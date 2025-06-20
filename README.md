@@ -1,5 +1,6 @@
-RoadEye
+#RoadEye
 RoadEye is a real-time vehicle detection and counting system built using the YOLO (You Only Look Once) model and OpenCV. It processes video input to detect vehicles (cars, trucks, buses, motorbikes) and counts them as they cross a dynamically positioned line, optimized for performance by processing a cropped region of the frame. The system is designed to work with videos of varying resolutions, displaying results in a scalable window and saving output with annotations.
+
 Features
 
 Vehicle Detection: Uses a pre-trained YOLO model to detect vehicles (cars, trucks, buses, motorbikes) with a confidence threshold of 0.4.
