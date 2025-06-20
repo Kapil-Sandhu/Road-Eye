@@ -34,37 +34,42 @@ Set Up a Virtual Environment (recommended):
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-
 Install Dependencies:
 pip install opencv-python ultralytics screeninfo
 
 
 Download YOLO Model ->
+
 Place your pre-trained YOLO model file (best.pt) in the project root directory. Alternatively, you can train or download a YOLO model using the ultralytics library (see their documentation).
 
 
 Prepare Input Video ->
+
 Place your input video file (e.g., t1.mp4) in the project root directory.
 
 
 Usage ->
+
 Run the Script:
 python vehicle.py
 
 
 Input and Output ->
+
 Input: The script processes a video file (e.g., t1.mp4) specified in vehicle.py.
 Output: An annotated video (output_video.mp4) is saved with detected vehicles, a counting line, vehicle count, and a yellow crop region.
 Real-Time Display: A window shows the video with annotations, scaled to fit your screen. Press Esc to exit.
 
 
 Customization ->
+
 Video File: Update cap = cv2.VideoCapture('t1.mp4') in vehicle.py to use a different video.
 Crop Region: Adjust crop_height_above = int(0.25 * frame_height) and crop_height_below = int(0.1 * frame_height) for a larger/smaller YOLO processing region for fps optimization.
 Counting Line: Modify count_line_y_ratio, line_start_x_ratio, or line_end_x_ratio to reposition the counting line.
 
 
 Project Structure ->
+
 RoadEye/
 ├── vehicle.py          # Main script for vehicle detection and counting
 ├── best.pt            # Pre-trained YOLO model file (user-provided)
@@ -75,11 +80,13 @@ RoadEye/
 
 
 Acknowledgments ->
+
 Ultralytics YOLO for the YOLO model implementation.
 OpenCV for video processing and visualization.
 screeninfo for dynamic screen resolution detection.
 
 
 Contact ->
+
 For issues or suggestions, please open an issue on GitHub or contact 
 Mail ID -> kapilsandhu2021@gmail.com.
