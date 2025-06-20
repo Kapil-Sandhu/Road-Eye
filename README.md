@@ -1,5 +1,7 @@
 RoadEye ->
+
 RoadEye is a real-time vehicle detection and counting system built using the YOLO (You Only Look Once) model and OpenCV. It processes video input to detect vehicles (cars, trucks, buses, motorbikes) and counts them as they cross a dynamically positioned line, optimized for performance by processing a cropped region of the frame. The system is designed to work with videos of varying resolutions, displaying results in a scalable window and saving output with annotations.
+
 
 Features ->
 
@@ -11,6 +13,7 @@ Adaptive Display: Scales the display window to fit the user's screen resolution 
 Output Video: Saves annotated video with detections, counting line, counter text, and crop boundary in full resolution.
 Real-Time Visualization: Displays detections, counting line, vehicle count, and crop region in real-time with OpenCV.
 
+
 Requirements ->
 
 Python: 3.7 or higher
@@ -20,38 +23,46 @@ ultralytics (YOLO model implementation)
 screeninfo (for detecting screen resolution)
 numpy (included with ultralytics for array operations)
 
+
 Installation ->
 
 Clone the Repository:
-git clone https://github.com/Kapil-Sandhu/RoadEye.git
+git clone https://github.com/Kapil-Sandhu/Road-Eye.git
 cd RoadEye
 
 Set Up a Virtual Environment (recommended):
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
+
 Install Dependencies:
 pip install opencv-python ultralytics screeninfo
+
 
 Download YOLO Model ->
 Place your pre-trained YOLO model file (best.pt) in the project root directory. Alternatively, you can train or download a YOLO model using the ultralytics library (see their documentation).
 
+
 Prepare Input Video ->
 Place your input video file (e.g., t1.mp4) in the project root directory.
+
 
 Usage ->
 Run the Script:
 python vehicle.py
+
 
 Input and Output ->
 Input: The script processes a video file (e.g., t1.mp4) specified in vehicle.py.
 Output: An annotated video (output_video.mp4) is saved with detected vehicles, a counting line, vehicle count, and a yellow crop region.
 Real-Time Display: A window shows the video with annotations, scaled to fit your screen. Press Esc to exit.
 
+
 Customization ->
 Video File: Update cap = cv2.VideoCapture('t1.mp4') in vehicle.py to use a different video.
 Crop Region: Adjust crop_height_above = int(0.25 * frame_height) and crop_height_below = int(0.1 * frame_height) for a larger/smaller YOLO processing region for fps optimization.
 Counting Line: Modify count_line_y_ratio, line_start_x_ratio, or line_end_x_ratio to reposition the counting line.
+
 
 Project Structure ->
 RoadEye/
@@ -62,10 +73,12 @@ RoadEye/
 ├── README.md          # Project documentation
 └── DESCRIPTION.md     # Brief project description
 
+
 Acknowledgments ->
 Ultralytics YOLO for the YOLO model implementation.
 OpenCV for video processing and visualization.
 screeninfo for dynamic screen resolution detection.
+
 
 Contact ->
 For issues or suggestions, please open an issue on GitHub or contact 
