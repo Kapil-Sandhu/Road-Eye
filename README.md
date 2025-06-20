@@ -71,7 +71,7 @@ Counting Line: Modify count_line_y_ratio, line_start_x_ratio, or line_end_x_rati
 Project Structure ->
 
 RoadEye/
-├── vehicle.py          # Main script for vehicle detection and counting
+├── vehicle.py         # Main script for vehicle detection and counting
 ├── best.pt            # Pre-trained YOLO model file (user-provided)
 ├── t1.mp4             # Input video file (user-provided)
 ├── output_video.mp4   # Output video with annotations (generated)
